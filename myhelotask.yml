@@ -1,0 +1,15 @@
+platform: linux
+
+image_resouce:
+  type: docker-image
+  source:
+    repository: python
+run:
+  path: python-master/heloworld/test.py
+
+inputs:
+  - name: python-master
+    path: python-master/heloworld
+
+output:
+  - name: helooutput

@@ -1,0 +1,34 @@
+---
+resources:
+- name: python-master
+  type: git
+  source:
+    uri: git@github.com:tripleaceinnovations/heloworld.git
+    branch: master
+
+task-config: &task-config
+  platform: linux
+  image_resouce:
+    type: docker-image
+    source:
+      repository: python
+  run:
+    path: echo
+    args:
+      - 'This is where we will ship the product'
+
+jobs:
+- name: hello-job
+  plan:
+    - get: python-master
+    - task: helotask
+      file: python-master/myhelotask.yml
+- name: ship-it
+  plan:
+    - get: python-master
+      trigger : true
+      passed: [python-master]
+    - task: heloshiptask
+      config:
+        << : *task-config
+    dir: **
