@@ -27,7 +27,7 @@ jobs:
   plan:
     - get: python-master
       trigger : true
-      passed: [python-master]
+      passed: [hello-job]
     - task: heloshiptask
       config:
         << : *task-config
