@@ -4,5 +4,6 @@ image_resouce:
   type: docker-image
   source:
     repository: python
+    tag: latest
 run:
   path: python-master/heloworld/test.py
