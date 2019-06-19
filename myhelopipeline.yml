@@ -22,7 +22,7 @@ jobs:
   plan:
     - get: python-master
     - task: helotask
-      file: python-master/myhelotask.yml
+      file: python-master/heloworld/myhelotask.yml
 - name: ship-it
   plan:
     - get: python-master
