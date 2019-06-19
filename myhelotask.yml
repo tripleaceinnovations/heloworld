@@ -1,8 +1,7 @@
 platform: linux
 image_resouce:
-  type: docker-image
-  source:
-    repository: ubuntu
-    tag: latest
+  type: registry-image
+  source: { repository: busybox }
 run:
-  path: heloworld/test.py
+  path: echo
+  args: ["Hello, world!"]
