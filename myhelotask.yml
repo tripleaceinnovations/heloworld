@@ -6,10 +6,3 @@ image_resouce:
     repository: python
 run:
   path: python-master/heloworld/test.py
-
-inputs:
-  - name: python-master
-    path: python-master/heloworld
-
-output:
-  - name: helooutput
