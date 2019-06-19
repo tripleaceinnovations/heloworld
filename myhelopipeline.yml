@@ -2,8 +2,8 @@
 resources:
 - name: python-master
   type: git
-  source:
-    uri: git@github.com:tripleaceinnovations/heloworld.git
+  source: &repo-source
+    uri: https://github.com/tripleaceinnovations/heloworld
     branch: master
 
 task-config: &task-config
@@ -22,11 +22,10 @@ jobs:
   plan:
     - get: python-master
     - task: helotask
-      file: python-master/heloworld/myhelotask.yml
+      file: heloworld/myhelotask.yml
 - name: ship-it
   plan:
     - get: python-master
-      trigger : true
       passed: [hello-job]
     - task: heloshiptask
       config:
