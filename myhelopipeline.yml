@@ -5,6 +5,11 @@ resources:
   source: &repo-source
     uri: https://github.com/tripleaceinnovations/heloworld
     branch: master
+- name: every-30s
+  type: time
+  icon: clock-outline
+  source:
+    interval: 30s
 
 task-config: &task-config
   platform: linux
@@ -20,7 +25,7 @@ task-config: &task-config
 jobs:
 - name: hello-job
   plan:
-    - get: python-master
+    - get: every-30s
     - task: helotask
       config:
         platform: linux
