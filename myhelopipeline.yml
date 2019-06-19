@@ -22,7 +22,14 @@ jobs:
   plan:
     - get: python-master
     - task: helotask
-      file: heloworld/myhelotask.yml
+      config:
+        platform: linux
+        image_resouce:
+          type: registry-image
+          source: { repository: busybox }
+        run:
+          path: echo
+          args: ["Hello, world!"]
 - name: ship-it
   plan:
     - get: python-master
