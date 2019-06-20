@@ -2,43 +2,19 @@
 resources:
 - name: python-master
   type: git
-  source: &repo-source
+  source:
     uri: https://github.com/tripleaceinnovations/heloworld
     branch: master
-- name: every-30s
-  type: time
-  icon: clock-outline
-  source:
-    interval: 30s
-
-task-config: &task-config
-  platform: linux
-  image_resouce:
-    type: docker-image
-    source:
-      repository: python
-  run:
-    path: echo
-    args:
-      - 'This is where we will ship the product'
 
 jobs:
 - name: hello-job
   plan:
-    - get: every-30s
+    - get: python-master
     - task: helotask
-      config:
-        platform: linux
-        image_resouce:
-          type: registry-image
-          source: { repository: busybox }
-        run:
-          path: echo
-          args: ["Hello, world!"]
+      file: python-master/heloworld/myhelotask.yml
 - name: ship-it
   plan:
     - get: python-master
       passed: [hello-job]
     - task: heloshiptask
-      config:
-        << : *task-config
+      file: python-master/heloworld/myshipithelotask.yml
