@@ -1,0 +1,3 @@
+FROM python:2
+ADD pytest.py .
+CMD ["python", "pytest.py"]

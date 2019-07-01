@@ -1,0 +1,378 @@
+    1  docker ps
+    2  sudo apt-get update -y
+    3  sudo apt-get install -y     apt-transport-https     ca-certificates     curl     software-properties-common
+    4  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    5  sudo apt-key fingerprint 0EBFCD88
+    6  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+    7     $(lsb_release -cs) \
+    8     stable"
+    9  sudo apt-get update -y
+   10  sudo apt-get install -y docker-ce
+   11  sudo usermod -aG docker $USER
+   12  exit
+   13  docker ps
+   14  dockr info
+   15  docker info
+   16  docker ps
+   17  sudo apt-get install -y python python-pip
+   18  pip install --user docker-compose
+   19  echo $PATH
+   20  echo $HOME
+   21  nano ~/.profile
+   22  source ~/.profile
+   23  echo $PATH
+   24  echo "export DOCKER_HOST=tcp://localhost:2375" >> ~/.bashrc && source ~/.bashrc
+   25  docker info
+   26  docker ps
+   27  docker-compose --version
+   28  sudo nano /etc/wsl.conf
+   29  wget https://raw.githubusercontent.com/starkandwayne/concourse-tutorial/master/docker-compose.yml
+   30  ls -latr
+   31  docker-compose up -d
+   32  docker images
+   33  docker ps -a
+   34  ls -latr
+   35  cd .local/
+   36  ls -latr
+   37  cd bin/
+   38  ls -latr
+   39  pwd
+   40  echo $PATH
+   41  cp C:\Users\dexy0\Downloads/fly /home/dexy/.local/bin
+   42  cp mnt/c:/Users/dexy0/Downloads/fly /home/dexy/.local/bin
+   43  cp /mnt/c/Users/dexy0/Downloads/fly.exe /home/dexy/.local/bin/
+   44  ls -latr
+   45  chmod a+x fly.exe 
+   46  sudo chmod 0755 fly.exe 
+   47  ls -latr
+   48  fly --target tutorial login --concourse-url http://127.0.0.1:8080 -u admin -p admin
+   49  pwd
+   50  cp /mnt/c/Users/dexy0/Downloads/fly.exe /usr/local/bin
+   51  cd /usr/local/bin
+   52  ls -latr
+   53  sudo cp /mnt/c/Users/dexy0/Downloads/fly.exe /usr/local/bin
+   54  ls latr
+   55  ls -latr
+   56  sudo chmod 0755 /usr/local/bin/fly.exe 
+   57  ls -latr
+   58  cd ~
+   59  ls -latr
+   60  cd cicd/
+   61  ls -latr
+   62  fly --target tutorial login --concourse-url http://127.0.0.1:8080 -u admin -p admin
+   63  cd /usr/local/bin
+   64  fly --target tutorial login --concourse-url http://127.0.0.1:8080 -u admin -p admin
+   65  ls -latr
+   66  exit
+   67  pwd
+   68  ls -latr
+   69  cd concourseci/
+   70  ls -latr
+   71  cd concourse-tutorial/tutorials/basic/task-hello-world
+   72  fly -t tutorial execute -c task_hello_world.yml
+   73  cd ~
+   74  pwd
+   75  ls
+   76  pwd
+   77  ls -latr
+   78  mkdir cicd
+   79  cd cicd/
+   80  fly -t tutorial execute -c task_hello_world.yml
+   81  exit
+   82  fly --target tutorial login --concourse-url http://127.0.0.1:8080 -u admin -p admin
+   83  cd /usr/local/bin/
+   84  fly --target tutorial login --concourse-url http://127.0.0.1:8080 -u admin -p admin
+   85  ls -latr
+   86  source ~/.profile 
+   87  echo $PATH
+   88  ls -latr
+   89  fly --target tutorial login --concourse-url http://127.0.0.1:8080 -u admin -p admin
+   90  ls
+   91  cd ~
+   92  ls -latr
+   93  docker ps
+   94  cat docker-compose.yml 
+   95  pwd
+   96  ls -latr
+   97  docker ps -a
+   98  docker-compose up -d
+   99  docker ps -a
+  100  ls -latr
+  101  pwd
+  102  ls cicd/
+  103  ls /mnt/c/Users/dexy0/Downloads/
+  104  cp /mnt/c/Users/dexy0/Downloads/fly.exe .
+  105  ls -latr
+  106  -rw-r--r-- 1 dexy dexy        0 Jun 13 08:41 .sudo_as_admin_successful
+  107  drwx------ 1 dexy dexy     4096 Jun 13 08:52 .cache
+  108  fly --target tutorial login --concourse-url http://127.0.0.1:8080 -u test -p test
+  109  pwd
+  110  echo $PATH
+  111  ls -latr
+  112  nano ~/.profile
+  113  source ~/.profile
+  114  nano ~/.profile
+  115  source ~/.profile
+  116  pwd
+  117  ls
+  118  mkdir fly
+  119  cp fly.exe fly
+  120  cd fly/
+  121  ls
+  122  cd ..
+  123  rm fly.exe 
+  124  nano ~/.profile
+  125  source ~/.profile
+  126  nano ~/.profile
+  127  source ~/.profile
+  128  pwd
+  129  cd fly/
+  130  fly --target demo login --concourse-url http://127.0.0.1:8080 -u test -p test 
+  131  exit
+  132  adduser jama
+  133  nano ~/.ssh/authorized_keys
+  134  fly -t local workers
+  135  cd ~
+  136  ls -latr
+  137  view docker-compose.yml 
+  138  docker-compose down
+  139  docker ps
+  140  docker images
+  141  ls -latr
+  142  mv docker-compose.yml starkandwayne_docker-compose.yml 
+  143  ls -latr
+  144  wget https://concourse-ci.org/docker-compose.yml
+  145  ls -latr
+  146  view docker-compose.yml 
+  147  docker-compose -d up
+  148  docker-compose up -d
+  149  docker images
+  150  docker ps -a
+  151  fly --target main login --team-name myteam --concourse-url http://127.0.0.1:8080 -u test -p test
+  152  fly -t main sync
+  153  fly --target demotest login --team-name myteam --concourse-url http://127.0.0.1:8080 -u test -p test
+  154  fly -t demotest set-team --team-name myteam --local-user test
+  155  fly --target demotest login --team-name myteam --concourse-url http://127.0.0.1:8080
+  156  fly --target demotest login --team-name myteam --concourse-url http://127.0.0.1:8080 -u test -p test
+  157  fly --target main login --team-name myteam --concourse-url http://127.0.0.1:8080 -u test -p test
+  158  fly --target demotest login --team-name main --concourse-url http://127.0.0.1:8080 -u test -p test
+  159  fly -t demotest set-team --team-name myteam --local-user test
+  160  history
+  161  view docker-compose.yml 
+  162  fly login -n my-team
+  163  fly login -n myteam
+  164  fly login -t demotest -n myteam
+  165  fly login -t demotest -n myteam -u test -p test
+  166  fly -t example teams
+  167  fly -t main teams
+  168  fly -t demotest teams
+  169  fly -t demotest teams -d
+  170  fly -t demotest get-team -n some-team
+  171  fly -t demotest get-team -n myteam
+  172  fly -t demotest rename-team --old-name myteam --new-name mycoolteam
+  173  cat ~/.flyrc
+  174  fly targets
+  175  fly -t demotest status
+  176  fly -t main tatus
+  177  fly -t main status
+  178  fly -t myteam status
+  179  fly -t mycoolteam status
+  180  fly -t demotest userinfo
+  181  fly -t myteam logout
+  182  cat ~/.flyrc 
+  183  fly logout -a
+  184  cat ~/.flyrc 
+  185  fly login -t demotest -n myteam -u test -p test
+  186  fly login -t demotest -n main -u test -p test
+  187  fly login -t demotest -n myteam -u test -p test
+  188  fly logout -a
+  189  fly login -t demotest -n main -u test -p test
+  190  cat ~/.flyrc 
+  191  fly login -t demo -n mycoolteam -u test -p test
+  192  cat ~/.flyrc 
+  193  fly -t main delete-target
+  194  cat ~/.flyrc 
+  195  fly -t demotest pipelines
+  196  fly -t demo pipelines
+  197  fly -t main pipelines
+  198  fly -t demotest check-resource --resource mypipeline/myresource
+  199  cat ~/.flyrc 
+  200  ls -latr
+  201  view docker-compose.yml 
+  202  docker ps -a
+  203  docker exce -it 030ccd15b3f0 bash
+  204  docker exec -it 030ccd15b3f0 bash
+  205  docker ps -a
+  206  docker logs tail -100f 030ccd15b3f0
+  207  docker logs tail --100f 030ccd15b3f0
+  208  docker logs --tail 100f 030ccd15b3f0
+  209  docker logs --tail 10f 030ccd15b3f0
+  210  docker logs --tail f 030ccd15b3f0
+  211  docker ps -a
+  212  docker logs --tail f e4eb26cb0e63
+  213  docker exec -it bash e4eb26cb0e63
+  214  docker exec -it e4eb26cb0e63 bash
+  215  pwd
+  216  ls -latr
+  217  vi cicd/
+  218  cd cicd/
+  219  vi mypipeline.yml
+  220  vim mypipeline.yml
+  221  cat mypipeline.yml 
+  222  rm mypipeline.yml 
+  223  vi mypipeline.yml
+  224  cd ..
+  225  ls
+  226  ls -latr
+  227  git status
+  228  git branch
+  229  cd  cicd/
+  230  ls -latr
+  231  git@github.com:tripleaceinnovations/learnconcourse.git
+  232  git clone git@github.com:tripleaceinnovations/learnconcourse.git
+  233  ls
+  234  cd learnconcourse/
+  235  git branch
+  236  git pull origin master
+  237  ls -latr
+  238  cat mypipeline.yml 
+  239  pwd
+  240  cp mypipeline.yml ~
+  241  cd ~
+  242  ls -latr
+  243  fly validate-pipeline --config mypipeline.yml
+  244  fly -t demotest set-pipeline --pipeline testpipeline --config mypipeline.yml
+  245  cat ~/.flyrc 
+  246  fly -t demo set-pipeline --pipeline testpipeline --config mypipeline.yml
+  247  docker ps -a
+  248  cat ~/.flyrc 
+  249  history
+  250  cat ~/.flyrc 
+  251  pwd
+  252  cd cicd/
+  253  git pull origin master
+  254  cd learnconcourse/
+  255  git pull origin master
+  256  cp mypipeline1.yml ~
+  257  cd ~
+  258  fly -t demotest set-pipeline --pipeline testpipeline1 --config mypipeline1.yml
+  259  fly -t demotest unpause-pipeline -p testpipeline1
+  260  ls /tmp
+  261  ls /tmp/tmp8mjipas1/
+  262  sudo ls /tmp/tmp8mjipas1/
+  263  docker ps -a
+  264  docker logs --tail 2f 030ccd15b3f0
+  265  fly -t demotest jobs -p mypipeline
+  266  cat ~/.flyrc 
+  267  fly -t demo jobs -p mypipeline
+  268  fly -t demo jobs -p mypipeline1
+  269  fly -t demotest jobs -p mypipeline1
+  270  fly --target demo login --team-name myteam --concourse-url http://127.0.0.1:8080 -u test -p test
+  271  fly --target demo login --team-name mycoolteam --concourse-url http://127.0.0.1:8080 -u test -p test
+  272  cat ~/.flyrc 
+  273  fly --target demotest login --team-name main --concourse-url http://127.0.0.1:8080 -u test -p test
+  274  cat ~/.flyrc 
+  275  fly -t demotest jobs -p mypipeline1
+  276  fly -t demotest jobs -p mypipeline
+  277  fly -t demotest jobs -p testpipeline
+  278  fly -t demotest jobs -p testpipeline1
+  279  fly -t demo jobs -p testpipeline
+  280  fly -t demo trigger-job --job testpipeline/golang-1.11 --watch
+  281  fly -t demo trigger-job --job testpipeline1/golang-1.11 --watch
+  282  fly -t demotest trigger-job --job testpipeline1/golang-1.11 --watch
+  283  python 3
+  284  python3
+  285  python
+  286  pwd
+  287  mkdir learnpython
+  288  cd learnpython/
+  289  vi test.py
+  290  vi test.py 
+  291  python3 test.py 
+  292  vi test.py 
+  293  cd ..
+  294  ls -latr
+  295  docker ps -a
+  296  docker exec -it 030ccd15b3f0 bash
+  297  history
+  298  cat mypipeline1.yml 
+  299  cat mypipeline.yml 
+  300  cat mypipeline1.yml 
+  301  pwd
+  302  cd cicd/
+  303  ls -latr
+  304  git@github.com:tripleaceinnovations/heloworld.git
+  305  gt clone git@github.com:tripleaceinnovations/heloworld.git
+  306  git clone git@github.com:tripleaceinnovations/heloworld.git
+  307  cd heloworld/
+  308  ls -latr
+  309  fly validate-pipeline --config pyhelloworld.yml
+  310  view pyhelloworld.yml 
+  311  git pull origin master
+  312  fly validate-pipeline --config mypipeline1.yml
+  313  git pull origin master
+  314  ls -latr
+  315  fly validate-pipeline --config myhelopipeline.yml
+  316  git pull origin master
+  317  fly validate-pipeline --config myhelopipeline.yml
+  318  cat myhelopipeline.yml 
+  319  fly validate-pipeline --config myhelopipeline.yml
+  320  git pull origin master
+  321  fly validate-pipeline --config myhelopipeline.yml
+  322  git pull origin master
+  323  fly validate-pipeline --config myhelopipeline.yml
+  324  fly -t demo set-pipeline --pipeline helopipeline --config myhelopipeline.yml
+  325  fly --target demo login --team-name mycoolteam --concourse-url http://127.0.0.1:8080 -u test -p test 
+  326  fly -t demo set-pipeline --pipeline helopipeline --config myhelopipeline.yml
+  327  git pull origin master
+  328  fly -t demo set-pipeline --pipeline helopipeline --config myhelopipeline.yml
+  329  git pull origin master
+  330  fly -t demo set-pipeline --pipeline helopipeline --config myhelopipeline.yml
+  331  git pull origin master
+  332  fly -t demo set-pipeline --pipeline helopipeline --config myhelopipeline.yml
+  333  git pull origin master
+  334  fly -t demo set-pipeline --pipeline helopipeline --config myhelopipeline.yml
+  335  git pull origin master
+  336  fly -t demo set-pipeline --pipeline helopipeline --config myhelopipeline.yml
+  337  git pull origin master
+  338  fly -t demo set-pipeline --pipeline helopipeline --config myhelopipeline.yml
+  339  git pull origin master
+  340  fly -t demo set-pipeline --pipeline helopipeline --config myhelopipeline.yml
+  341  git pull origin master
+  342  fly -t demo set-pipeline --pipeline helopipeline --config myhelopipeline.yml
+  343  git pull origin master
+  344  fly -t demo set-pipeline --pipeline helopipeline --config myhelopipeline.yml
+  345  fly validate-pipeline --config myhelopipeline.yml
+  346  cd ..
+  347  pwd
+  348  ls
+  349  git@github.com:tripleaceinnovations/concourse-test.git
+  350  it clone git@github.com:tripleaceinnovations/concourse-test.git
+  351  git clone git@github.com:tripleaceinnovations/concourse-test.git
+  352  cd concourse-test/
+  353  ls -latr
+  354  git branch
+  355  git branch basic-helloworld
+  356  git branch
+  357  git checkout basic-helloworld
+  358  ls -latr
+  359  git pull origin basic-helloworld
+  360  ls
+  361  git pull origin master
+  362  ls -latr
+  363  fly validate-pipeline --config basichelloworld.yml
+  364  fly validate-pipeline --config basichelloworldpipeline.yml
+  365  fly -t demo set-pipeline --pipeline basicpipeline --config basichelloworldpipeline.yml
+  366  fly -t demo unpause-pipeline -p basicpipeline
+  367  git pull origin master
+  368  fly -t demo set-pipeline --pipeline basicpipeline --config basichelloworldpipeline.yml
+  369  git pull origin master
+  370  fly -t demo set-pipeline --pipeline basicpipeline --config basichelloworldpipeline.yml
+  371  cd ..
+  372  ls
+  373  cd heloworld/
+  374  git pull origin master
+  375  ls -latr
+  376  fly -t demo set-pipeline --pipeline helopipeline --config myhelopipeline.yml
+  377  clear
+  378  history > hist.txt
