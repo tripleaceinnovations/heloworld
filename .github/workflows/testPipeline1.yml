@@ -6,7 +6,7 @@ name: myWorkflow
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master, learn_gha ]
+    branches: [ master ]
   pull_request:
     branches: [ master, learn_gha ]
   # Allows you to run this workflow manually from the Actions tab
