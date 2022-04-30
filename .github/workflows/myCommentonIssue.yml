@@ -1,6 +1,4 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
+name: myCreate comment on new issues
 
 # Controls when the workflow will run
 on:
@@ -20,7 +18,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # dumps api response of githib.event; Did not work bcos of toJSON error: '${{ toJSON{github.event) }} | jq'
       - name: myDumpGHContextSteapNamed
         run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
