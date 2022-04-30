@@ -2,7 +2,7 @@ name: myCreate comment on new issues
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on opened issues in github Issue tab
+  # Triggers the workflow when a new issue is opened issues in the github Issue tab
   issues:
     types: [ opened ]
 
@@ -15,10 +15,22 @@ jobs:
   comment-with-action-job-name:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # dumps api response of githib.event; Did not work bcos of toJSON error: '${{ toJSON{github.event) }} | jq'
+      # dumps api response of githib.event
       - name: myDumpGHContextSteapNamed
         run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
+      #using community created action to do comment in issue - peter-evans/create-or-update-comment@v2
+      - name: Create comment
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          # Using the variable that will have issue number generated when an issue is created in Issue tab
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            This is a multi-line test comment
+            - With GitHub **Markdown** :sparkles:
+            - Created by [create-or-update-comment][1]
+
+            [1]: https://github.com/peter-evans/create-or-update-comment
+          reactions: '+1'
