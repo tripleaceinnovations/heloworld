@@ -22,5 +22,5 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: myDumpGHContextSteapNamed
-        run: echo '${{ toJSON{github.event) }} | jq'
+        run: echo '${{ toJSON{github.event) }}' | jq
         shell: bash
