@@ -20,5 +20,5 @@ jobs:
     steps:
       # dumps api response of githib.event; Did not work bcos of toJSON error: '${{ toJSON{github.event) }} | jq'
       - name: myDumpGHContextSteapNamed
-        run: echo '${{ github.event }} | jq'
+        run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
