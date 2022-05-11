@@ -39,5 +39,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: myHelloWorldStep
-        run: echo "Goodbye, world!"
+        run: sleep 20
         shell: bash
