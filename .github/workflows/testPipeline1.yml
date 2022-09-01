@@ -41,5 +41,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: myHelloWorldStep
-        run: sleep 52
+        run: sleep 55
         shell: bash
